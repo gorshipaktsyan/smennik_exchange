@@ -1,0 +1,21 @@
+#app {
+
+}
+
+#container {
+    margin: auto;
+    width: 96%;
+}
+
+#rates {
+    width: 55%;
+    margin-top: 10px;
+    float: left;
+}
+
+#currencies {
+    width: 37%;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}

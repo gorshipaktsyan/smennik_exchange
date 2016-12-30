@@ -42,19 +42,19 @@ class App extends React.Component {
 
 }
 
-//export the connected class
-function mapStateToProps(state) {
-  return({
-    rateList: state.rateList,
-  })
-}
+  //export the connected class
+  function mapStateToProps(state) {
+    return({
+      rateList: state.rateList,
+    })
+  }
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    setRateData: setRateData,
+  const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({
+      setRateData: setRateData,
 
-    getRates: getRates
-  }, dispatch)
-};
+      getRates: getRates
+    }, dispatch)
+  };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+  export default connect(mapStateToProps, mapDispatchToProps)(App);

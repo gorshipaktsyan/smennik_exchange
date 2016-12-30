@@ -1,0 +1,8 @@
+/.git
+/.idea
+/node_modules
+.gitignore
+.idea/exchanges.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml

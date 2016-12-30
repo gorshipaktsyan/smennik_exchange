@@ -15,7 +15,6 @@ export default class CurrencyList extends React.Component {
         this.onSelectAll = this.onSelectAll.bind(this);
     }
 
-
     onSelect (row, isSelected, e) {
 
         if (isSelected) {

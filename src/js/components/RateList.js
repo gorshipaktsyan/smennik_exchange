@@ -14,11 +14,11 @@ export default class RateList extends React.Component {
         this.beforeSaveCell = this.beforeSaveCell.bind(this);
     }
 
-    afterSaveCell (row, cellName, cellValue) {               // a hook for after saving cell
+    afterSaveCell (row, cellName, cellValue) {             // a hook for after saving cell
         this.props.changeRateValue(row);
     };
 
-    beforeSaveCell (row, cellName, cellValue) {              // a hook for before saving cell
+    beforeSaveCell (row, cellName, cellValue) {            // a hook for before saving cell
         // You can do any validation on here for editing value,
         // return false for reject the editing
         return true;

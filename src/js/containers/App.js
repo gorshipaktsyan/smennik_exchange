@@ -52,7 +52,6 @@ class App extends React.Component {
   const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
       setRateData: setRateData,
-
       getRates: getRates
     }, dispatch)
   };

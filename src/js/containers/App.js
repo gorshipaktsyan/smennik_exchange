@@ -1,10 +1,10 @@
 import React from "react";
-import axios from "axios";
 import { connect } from 'react-redux';
 import RateList from "./RateList";
 import CurrencyList from "./CurrencyList";
 import { bindActionCreators } from 'redux';
 import { setRateData, getRates } from '../actions/index';
+import { sendStore } from '../services/services';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,17 +18,13 @@ class App extends React.Component {
     };
   }
 
+  saveStore(event) {
+    sendStore(this.props.rateList);
+  };
+
   componentWillMount () {
     this.props.getRates();
   };
-
-  saveStore(event) {
-
-    axios.post("/admin/exchange", this.props.rateList)
-        .then(function (response) {
-          console.log(response);
-        })
-  }
 
   render() {
     return (

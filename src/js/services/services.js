@@ -7,3 +7,11 @@ export function sendStore(rateList) {
             console.log(response);
         })
 }
+
+export function logOut() {
+
+    axios.get("/admin/logout")
+        .then(function (response) {
+            console.log(response);
+        })
+}

@@ -1,6 +1,4 @@
-const initialState = [];
-
-export default function rate(state = initialState, action) {
+export default function rate(state = [], action) {
 
     switch (action.type) {
         case 'ADD_RATE':
@@ -23,7 +21,6 @@ export default function rate(state = initialState, action) {
 
                 if (item.code === action.payloads) {
                     state.splice(index, 1);
-
                 }
             });
 
@@ -48,3 +45,4 @@ export default function rate(state = initialState, action) {
             return state;
     }
 }
+

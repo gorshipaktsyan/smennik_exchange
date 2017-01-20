@@ -4,13 +4,15 @@ import RateList from "./RateList";
 import CurrencyList from "./CurrencyList";
 import { bindActionCreators } from 'redux';
 import { setRateData, getRates } from '../actions/index';
-import { sendStore } from '../services/services';
+import { sendStore, logOut } from '../services/services';
+import { Button } from 'react-bootstrap';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.saveStore = this.saveStore.bind(this);
+    this.signOut = this.signOut.bind(this);
 
     this.state = {
       showRateList: true,
@@ -22,6 +24,10 @@ class App extends React.Component {
     sendStore(this.props.rateList);
   };
 
+  signOut(event) {
+    logOut();
+  };
+
   componentWillMount () {
     this.props.getRates();
   };
@@ -29,13 +35,18 @@ class App extends React.Component {
   render() {
     return (
         <div id="container">
-          {this.state.showRateList && <RateList/>}
+          <div id="list">
+            {this.state.showRateList && <RateList/>}
+            <div id="buttons">
+              <Button bsStyle="primary" bsSize="small" onClick={this.saveStore}>Save</Button>
+              <Button bsStyle="primary" bsSize="small" onClick={this.signOut}>Logout</Button>
+            </div>
+          </div>
           {this.state.showCurrencyList && <CurrencyList/>}
-          <input type="button" onClick={this.saveStore}></input>
+
         </div>
     );
   }
-
 }
 
   //export the connected class

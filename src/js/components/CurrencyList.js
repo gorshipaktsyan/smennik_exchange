@@ -36,9 +36,10 @@ export default class CurrencyList extends React.Component {
     };
 
     render() {
+
         return (
             <div id="currencies">
-                <BootstrapTable data={this.props.currencyList.list} selectRow={this} striped hover>
+                <BootstrapTable data={this.props.currencyList.list} selectRow={this} striped hover >
                     <TableHeaderColumn isKey dataField='id'>ID</TableHeaderColumn>
                     <TableHeaderColumn dataField='country'>Country</TableHeaderColumn>
                     <TableHeaderColumn dataField='currency'>Currency</TableHeaderColumn>
@@ -46,6 +47,7 @@ export default class CurrencyList extends React.Component {
                     <TableHeaderColumn dataField='code'>code</TableHeaderColumn>
                 </BootstrapTable>
             </div>
+
         )
     }
 }

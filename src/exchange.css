@@ -3,19 +3,35 @@
 }
 
 #container {
-    margin: auto;
-    width: 96%;
+
+    display: table;
+    margin: 0 auto;
+    width: 90%;
+
+}
+
+#list {
+    width: 64%;
+    float: left;
+
 }
 
 #rates {
-    width: 55%;
-    margin-top: 10px;
-    float: left;
+
+
+
 }
 
 #currencies {
-    width: 37%;
-    margin-top: 10px;
-    margin-left: 20px;
+
+    width: 34%;
     float: left;
+
+}
+
+#buttons {
+
+    display: table;
+    margin: 0 auto;
+
 }
